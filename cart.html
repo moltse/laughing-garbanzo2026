@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <button class="header-button logo-button" onclick="location.href='index.html'">
+            Logo
+        </button>
+        <button class="header-button phone-button">
+            +7 (900) 400 72-23
+        </button>
+        <button class="header-button cart-button">
+            Корзина<span id="cart-count"></span>
+        </button>
+    </header>
+    <div id="layout">
+        <!-- Delivery place card -->
+        <section class="card" id="delivery-card">
+            <h2>Место доставки</h2>
+            <form id="delivery-form">
+                <input type="text" id="address-input" name="address" class="field" placeholder="Адрес"
+                    autocomplete="street-address">
+                <textarea id="courier-message" name="courier-message" class="field" placeholder="Сообщение курьеру"
+                    rows="1"></textarea>
+            </form>
+            <p id="delivery-time-label">Время доставки:</p>
+            <p id="delivery-time">70-80 минут</p>
+        </section>
+        <section class="card" id="payment-card">
+            <h2>Способ оплаты</h2>
+
+            <div class="price-row" id="item-price-row">
+                <span class="price-label">Цена товара</span>
+                <span class="price-value" id="item-price-placeholder-total">0 ₽</span>
+            </div>
+
+            <div class="price-row" id="delivery-price-row">
+                <span class="price-label">Цена доставки</span>
+                <span class="price-value" id="delivery-price-placeholder">0 ₽</span>
+            </div>
+
+            <div class="price-row commission" id="commission-row">
+                <span class="price-label">Коммисия сервиса</span>
+                <span class="price-value" id="commission-placeholder">0 ₽</span>
+            </div>
+
+            <div class="footer-row">
+                <div id="full-price-placeholder">Итого: 0 ₽</div>
+                <button type="button" class="btn" id="pay-button">Оплатить</button>
+            </div>
+        </section>
+        <section class="card" id="order-card">
+            <div class="order-header">
+                <h2>Ваш заказ</h2>
+                <button type="button" class="btn" id="clear-all-button">Очистить все</button>
+            </div>
+            <div id="order-items">
+                <!-- товары будут вставлены сюда через JS -->
+            </div>
+        </section>
+    </div>
+    <template id="order-item-template">
+        <div class="order-item">
+            <div class="item-image-placeholder"></div>
+            <div class="item-name-placeholder">Имя</div>
+
+            <div class="qty-control">
+                <button type="button" class="btn qty-btn qty-decrease-btn">-</button>
+                <span class="item-qty-placeholder">0</span>
+                <button type="button" class="btn qty-btn qty-increase-btn">+</button>
+            </div>
+
+            <div class="item-price-placeholder">0 ₽</div>
+        </div>
+    </template>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column footer-logo">
+                <div class="footer-logo-text">
+                    Logo
+                </div>
+                <p>
+                    Ресторан китайской кухни
+                    с доставкой
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3>
+                    Контакты
+                </h3>
+                <a href="tel:+79284174714">
+                    +7 (928) 417-47-14
+                </a>
+                <p>
+                    Ежедневно<br>
+                    10:00 — 23:00
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3>
+                    Информация
+                </h3>
+                <a href="privacy.html">
+                    Политика конфиденциальности
+                </a>
+            </div>
+            <div class="footer-column">
+                <h3>
+                    Доставка
+                </h3>
+                <p>
+                    Доставка осуществляется
+                    ежедневно по городу.
+                </p>
+                <p>
+                    Заказы принимаются
+                    по телефону.
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>
+                © 2026 Logo. Все права защищены.
+            </span>
+        </div>
+    </footer>
+    <script src="scripts/cart.js"></script>
+</body>
+</html>

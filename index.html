@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ресторан китайской кухни</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <button class="header-button logo-button" href="#">
+            Logo
+        </button>
+        <button class="header-button phone-button">
+            +7 (900) 400 72-23
+        </button>
+        <button class="header-button cart-button" onclick="location.href='cart.html'">
+            Корзина<span id="cart-count"></span>
+        </button>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <div class="hero-title">
+                <h1>
+                    Ресторан<br>
+                    китайской кухни<br>
+                    с доставкой по г.Новороссийску
+                </h1>
+            </div>
+            <div class="hero-image">
+                <img src="img/kitchen.jpg" alt="Ресторан китайской кухни">
+            </div>
+        </section>
+        <section class="categories-section">
+            <div class="categories-list">
+                <h2>
+                    Категории
+                </h2>
+                <nav>
+                    <a href="#sushi">
+                        Суши и Роллы
+                    </a>
+                    <a href="#hot-dishes">
+                        Горячие блюда
+                    </a>
+                    <a href="#soups">
+                        Супы
+                    </a>
+                    <a href="#drinks">
+                        Напитки
+                    </a>
+                    <a href="#desserts">
+                        Десерты
+                    </a>
+                </nav>
+            </div>
+            <div class="category-slider">
+
+                <div class="category-image sushi-image">
+                    <img src="img/sushi.jpg" alt="">
+                </div>
+                <div class="category-image hot-image">
+                    <img src="img/hot.jpg" alt="">
+                </div>
+                <div class="category-image soup-image">
+                    <img src="img/soup.jpg" alt="">
+                </div>
+                <div class="category-image drinks-image">
+                    <img src="img/drinks.jpg" alt="">
+                </div>
+                <div class="category-image dessert-image">
+                    <img src="img/dessert.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="menu-section" id="sushi">
+            <h2 class="section-title">
+                Суши и Роллы
+            </h2>
+            <div class="dishes">
+                <article class="dish" data-id="1" data-name="Филадельфия" data-price="450" data-image="img/sushi1.jpg">
+                    <img src="img/sushi1.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Филадельфия</span>
+                        <button class="add-button">
+                            +
+                        </button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Филадельфия</h3>
+                        <p>
+                            Лосось, сливочный сыр,
+                            рис и нори.
+                        </p>
+                        <strong>
+                            450 ₽
+                        </strong>
+                    </div>
+                </article>
+                <article class="dish" data-id="2" data-name="Калифорния" data-price="420" data-image="img/sushi2.jpg">
+                    <img src="img/sushi2.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Калифорния</span>
+                        <button class="add-button">
+                            +
+                        </button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Калифорния</h3>
+                        <p>
+                            Краб, авокадо,
+                            рис и тобико.
+                        </p>
+                        <strong>
+                            420 ₽
+                        </strong>
+                    </div>
+                </article>
+                <article class="dish" data-id="3" data-name="Дракон" data-price="490" data-image="img/sushi3.jpg">
+                    <img src="img/sushi3.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Дракон</span>
+                        <button class="add-button">
+                            +
+                        </button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Дракон</h3>
+                        <p>
+                            Угорь, авокадо,
+                            соус унаги.
+                        </p>
+                        <strong>
+                            490 ₽
+                        </strong>
+                    </div>
+                </article>
+                <article class="dish" data-id="4" data-name="Лосось Маки" data-price="350" data-image="img/sushi4.jpg">
+                    <img src="img/sushi4.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Лосось Маки</span>
+                        <button class="add-button">
+                            +
+                        </button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Лосось Маки</h3>
+                        <p>
+                            Лосось, рис и нори.
+                        </p>
+                        <strong>
+                            350 ₽
+                        </strong>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="menu-section" id="hot-dishes">
+            <h2 class="section-title">
+                Горячие Блюда
+            </h2>
+            <div class="dishes">
+                <article class="dish" data-id="5" data-name="Курица терияки" data-price="390" data-image="img/hot.jpg">
+                    <img src="img/hot.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Курица терияки</span>
+                        <button class="add-button">+</button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Курица терияки</h3>
+                        <p>Курица, овощи и соус терияки.</p>
+                        <strong>390 ₽</strong>
+                    </div>
+                </article>
+                <article class="dish" data-id="6" data-name="Лапша с овощами" data-price="320" data-image="img/hot1.jpg">
+                    <img src="img/hot1.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Лапша с овощами</span>
+                        <button class="add-button">+</button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Лапша с овощами</h3>
+                        <p>Лапша с овощами и фирменным соусом.</p>
+                        <strong>320 ₽</strong>
+                    </div>
+                </article>
+                <article class="dish" data-id="7" data-name="Свинина" data-price="430" data-image="img/hot2.jpg">
+                    <img src="img/hot2.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Свинина</span>
+                        <button class="add-button">+</button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Свинина</h3>
+                        <p>Свинина в кисло-сладком соусе.</p>
+                        <strong>430 ₽</strong>
+                    </div>
+                </article>
+                <article class="dish" data-id="8" data-name="Говядина" data-price="470" data-image="img/hot3.jpg">
+                    <img src="img/hot3.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Говядина</span>
+                        <button class="add-button">+</button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Говядина</h3>
+                        <p>Говядина с овощами и специями.</p>
+                        <strong>470 ₽</strong>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="menu-section" id="soups">
+            <h2 class="section-title">
+                Супы
+            </h2>
+            <div class="dishes">
+                <article class="dish" data-id="9" data-name="Том Ям" data-price="450" data-image="img/soup1.jpg">
+                    <img src="img/soup1.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Том Ям</span>
+                        <button class="add-button">+</button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Том Ям</h3>
+                        <p>Острый суп с креветками.</p>
+                        <strong>450 ₽</strong>
+                    </div>
+                </article>
+                <article class="dish" data-id="10" data-name="Мисо суп" data-price="250" data-image="img/soup2.jpg">
+                    <img src="img/soup2.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Мисо суп</span>
+                        <button class="add-button">+</button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Мисо суп</h3>
+                        <p>Мисо, тофу и водоросли.</p>
+                        <strong>250 ₽</strong>
+                    </div>
+                </article>
+                <article class="dish" data-id="11" data-name="Куриный суп" data-price="280" data-image="img/soup3.jpg">
+                    <img src="img/soup3.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Куриный суп</span>
+                        <button class="add-button">+</button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Куриный суп</h3>
+                        <p>Курица, лапша и зелень.</p>
+                        <strong>280 ₽</strong>
+                    </div>
+                </article>
+                <article class="dish" data-id="12" data-name="Суп с морепродуктами" data-price="410" data-image="img/soup4.jpg">
+                    <img src="img/soup4.jpg" alt="Блюдо">
+
+                    <div class="dish-bottom">
+                        <span>Суп с морепродуктами</span>
+                        <button class="add-button">+</button>
+                    </div>
+
+                    <div class="dish-overlay">
+                        <h3>Суп с морепродуктами</h3>
+                        <p>Креветки, кальмары и овощи.</p>
+                        <strong>410 ₽</strong>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="menu-section" id="desserts">
+            <h2 class="section-title">
+                Десерты
+            </h2>
+            <div class="dishes">
+                <article class="dish" data-id="13" data-name="Моти" data-price="290" data-image="img/dessert1.jpg">
+                    <img src="img/dessert1.jpg" alt="Блюдо">
+
+                    <div class="dish-bottom">
+                        <span>Моти</span>
+                        <button class="add-button">+</button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Моти</h3>
+                        <p>Японский десерт с нежной начинкой.</p>
+                        <strong>290 ₽</strong>
+                    </div>
+                </article>
+                <article class="dish" data-id="14" data-name="Чизкейк" data-price="330" data-image="img/dessert2.jpg">
+                    <img src="img/dessert2.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Чизкейк</span>
+                        <button class="add-button">+</button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Чизкейк</h3>
+                        <p>Сливочный чизкейк с ягодным соусом.</p>
+                        <strong>330 ₽</strong>
+                    </div>
+                </article>
+                <article class="dish" data-id="15" data-name="Фруктовый десерт" data-price="280" data-image="img/dessert3.jpg">
+                    <img src="img/dessert3.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Фруктовый десерт</span>
+                        <button class="add-button">+</button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Фруктовый десерт</h3>
+                        <p>Свежие фрукты и сливочный крем.</p>
+                        <strong>280 ₽</strong>
+                    </div>
+                </article>
+                <article class="dish" data-id="16" data-name="Банановый ролл" data-price="310" data-image="img/dessert4.jpg">
+                    <img src="img/dessert4.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Банановый ролл</span>
+                        <button class="add-button">+</button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Банановый ролл</h3>
+                        <p>Банан, шоколад и кокос.</p>
+                        <strong>310 ₽</strong>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="menu-section" id="drinks">
+            <h2 class="section-title">
+                Напитки
+            </h2>
+            <div class="dishes">
+                <article class="dish" data-id="17" data-name="Китайский чай" data-price="180" data-image="img/drinks.jpg">
+                    <img src="img/drinks.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Китайский чай</span>
+                        <button class="add-button">+</button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Китайский чай</h3>
+                        <p>Традиционный китайский зеленый чай.</p>
+                        <strong>180 ₽</strong>
+                    </div>
+                </article>
+                <article class="dish" data-id="18" data-name="Лимонад" data-price="220" data-image="img/drinks2.jpg">
+                    <img src="img/drinks2.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Лимонад</span>
+                        <button class="add-button">+</button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Лимонад</h3>
+                        <p>Домашний цитрусовый лимонад.</p>
+                        <strong>220 ₽</strong>
+                    </div>
+                </article>
+                <article class="dish" data-id="19" data-name="Кола" data-price="150" data-image="img/drinks3.jpg">
+                    <img src="img/drinks3.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Кола</span>
+                        <button class="add-button">+</button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Кола</h3>
+                        <p>Классический прохладительный напиток.</p>
+                        <strong>150 ₽</strong>
+                    </div>
+                </article>
+                <article class="dish" data-id="20" data-name="Минеральная вода" data-price="120" data-image="img/drinks4.jpg">
+                    <img src="img/drinks4.jpg" alt="Блюдо">
+                    <div class="dish-bottom">
+                        <span>Минеральная вода</span>
+                        <button class="add-button">+</button>
+                    </div>
+                    <div class="dish-overlay">
+                        <h3>Минеральная вода</h3>
+                        <p>Холодная минеральная вода.</p>
+                        <strong>120 ₽</strong>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-column footer-logo">
+                <div class="footer-logo-text">
+                    Logo
+                </div>
+                <p>
+                    Ресторан китайской кухни
+                    с доставкой
+                </p>
+
+            </div>
+            <!-- Контакты -->
+            <div class="footer-column">
+                <h3>
+                    Контакты
+                </h3>
+                <a href="tel:+79284174714">
+                    +7 (928) 417-47-14
+                </a>
+                <p>
+                    Ежедневно<br>
+                    10:00 — 23:00
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3>
+                    Информация
+                </h3>
+                <a href="privacy.html">
+                    Политика конфиденциальности
+                </a>
+            </div>
+            <div class="footer-column">
+                <h3>
+                    Доставка
+                </h3>
+                <p>
+                    Доставка осуществляется
+                    ежедневно по городу.
+                </p>
+                <p>
+                    Заказы принимаются
+                    по телефону.
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>
+                © 2026 Logo. Все права защищены.
+            </span>
+        </div>
+    </footer>
+    <script src="scripts/cart.js"></script>
+</body>
+</html>
